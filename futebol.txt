@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campeonato de Várzea</title>
+    <style>
+        /* Estilos simples para melhorar a aparência */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .tab-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Campeonato de Várzea</h1>
+
+<button onclick="openTab('tabela')">Tabela</button>
+<button onclick="openTab('artilheiro')">Artilheiro</button>
+
+<div id="tabela" class="tab-content">
+    <h2>Tabela do Campeonato</h2>
+    <table>
+        <tr>
+            <th>Posição</th>
+            <th>Time</th>
+            <th>Pontos</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Time A</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Time B</td>
+            <td>12</td>
+        </tr>
+        <!-- Adicione mais linhas para os outros times -->
+    </table>
+</div>
+
+<div id="artilheiro" class="tab-content">
+    <h2>Artilheiro do Campeonato</h2>
+    <p>O artilheiro é: Jogador X do Time Y com Z gols.</p>
+</div>
+
+<script>
+    function openTab(tabName) {
+        var i, tabContent;
+        tabContent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabContent.length; i++) {
+            tabContent[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+    }
+</script>
+
+</body>
+</html>
